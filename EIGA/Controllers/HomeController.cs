@@ -32,7 +32,7 @@ namespace EIGA.Controllers
       string connectionString = "Server=172.16.160.21;Port=3306;Database=110632;Uid=110632;Pwd=inf2122sql;";
 
       // maak een lege lijst waar we de namen in gaan opslaan
-      List<Film> products = new List<Film>();
+      List<Film> Film = new List<Film>();
 
       // verbinding maken met de database
       using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -41,7 +41,7 @@ namespace EIGA.Controllers
         conn.Open();
 
         // SQL query die we willen uitvoeren
-        MySqlCommand cmd = new MySqlCommand("select * from product", conn);
+        MySqlCommand cmd = new MySqlCommand("select * from film", conn);
 
         // resultaat van de query lezen
         using (var reader = cmd.ExecuteReader())
@@ -51,23 +51,21 @@ namespace EIGA.Controllers
           {
             // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
             string Name = reader["Naam"].ToString();
-            string Beschikbaarheid = reader["Beschikbaarheid"].ToString();
-            string Prijs = reader["Prijs"].ToString();
+            string Poster = reader["Poster"].ToString();
 
             Film p = new Film();
             // voeg de naam toe aan de lijst met namen
             p.Name = Name;
-            p.Available = Beschikbaarheid;
-            p.Price = Prijs;
+            p.Poster = Poster;
 
-            products.Add(p);
+            Film.Add(p);
 
           }
         }
       }
 
       // return de lijst met namen
-      return products;
+      return Film;
     }
 
     public IActionResult Privacy()

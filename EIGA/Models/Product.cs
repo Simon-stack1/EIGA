@@ -4,8 +4,7 @@
   {
     public string Name { get; set; } 
 
-    public string Available { get; set; } 
+    public string Poster { get; set; } 
 
-    public string Price { get; set; }
   }
 }
