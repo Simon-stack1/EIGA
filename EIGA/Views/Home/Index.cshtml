@@ -10,7 +10,7 @@
   <div class="products">
     @foreach (Film p in Model)
     {
-      <a href="/details/@p.Id" class="product" style="background-image:url(@p.Poster)">
+      <a href="/film/@p.Id" class="product" style="background-image:url(@p.Poster)">
         <p class="title">@p.Name</p>        
       </a>
     }
