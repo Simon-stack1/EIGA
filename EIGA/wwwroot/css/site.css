@@ -1,5 +1,5 @@
 ﻿header {
-    height: 200px;
+    height: 150px;
     background-image: url("/Images/headerbackground.png");
     background-color: red;
     margin: 0;
@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    background-color: lightgray;
+    background-color: white;
 }
 
 .products {
@@ -15,7 +15,12 @@ body {
   flex-wrap: wrap;
 }
 
-.product:hover{
+.poster {
+    width: 200px;
+    height: 300px;
+}
+
+.poster:hover{
     width: 250px;
     height: 375px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -24,8 +29,11 @@ body {
 .product {
     background-color: red;
     background-size:cover;
-    margin: 50px;
-    padding: 10px;
-    width: 200px;
-    height: 300px;
+    margin: 150px;
+    width: 250px;
+    height: 350px;
+}
+
+.text-center {
+    margin-top: 5cm;
 }

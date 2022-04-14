@@ -12,7 +12,7 @@
                 {
                   <li class="splide__slide">
                       <a href="/film/@p.Id" class="product">  
-                          <img src="@p.Poster" width="200" height="300">
+                          <img src="@p.Poster" class="poster">
                       </a>
                   </li>
                 }
@@ -26,8 +26,9 @@ var splide = new Splide( '.splide', {
   type   : 'loop',
   perPage: 3,
   focus  : 'center',
-  fixedWidth : '200px',
-  fixedHeight : '300px',
+  fixedWidth : '240px',
+  fixedHeight : '380px',
+  gap : 50,
 } );
 
 splide.mount();
