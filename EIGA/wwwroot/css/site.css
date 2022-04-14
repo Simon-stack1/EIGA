@@ -1,29 +1,23 @@
 ﻿header {
-    height: 80px;
+    height: 200px;
     background-image: url("/Images/headerbackground.png");
     background-color: red;
     margin: 0;
 }
 
-img{
-    height: 60px;
-    width: 60px;
-}
-
-body{
+body {
     margin: 0;
+    background-color: lightgray;
 }
 
 .products {
   display: flex;
   flex-wrap: wrap;
-  background-color:gray;
 }
 
 .product:hover{
     width: 250px;
     height: 375px;
-    margin: 10px;
     -webkit-transition: all 0.3s ease-in-out;
 }
 

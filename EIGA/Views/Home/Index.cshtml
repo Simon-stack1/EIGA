@@ -5,13 +5,30 @@
 }
 
 <div class="text-center">
-  <h1 class="display-4">Welcome</h1>
-
-  <div class="products">
-    @foreach (Film p in Model)
-    {
-      <a href="/film/@p.Id" class="product" style="background-image:url(@p.Poster)">  
-      </a>
-    }
-  </div>
+    <section class="splide" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+		<ul class="splide__list">
+                @foreach (Film p in Model)
+                {
+                  <li class="splide__slide">
+                      <a href="/film/@p.Id" class="product">  
+                          <img src="@p.Poster" width="200" height="300">
+                      </a>
+                  </li>
+                }
+  		</ul>
+      </div>
+    </section>
 </div>
+
+<script>
+var splide = new Splide( '.splide', {
+  type   : 'loop',
+  perPage: 3,
+  focus  : 'center',
+  fixedWidth : '200px',
+  fixedHeight : '300px',
+} );
+
+splide.mount();
+</script>
