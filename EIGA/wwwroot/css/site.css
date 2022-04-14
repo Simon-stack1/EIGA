@@ -1,5 +1,6 @@
-﻿header{
+﻿header {
     height: 80px;
+    background-image: url("Images/headerbackground.png");
     background-color: red;
     margin: 0;
 }
