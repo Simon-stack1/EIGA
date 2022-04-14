@@ -17,12 +17,20 @@ body{
 .products {
   display: flex;
   flex-wrap: wrap;
+  background-color:gray;
+}
+
+.product:hover{
+    width: 250px;
+    height: 375px;
+    margin: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
 }
 
 .product {
     background-color: red;
     background-size:cover;
-    margin: 10px;
+    margin: 50px;
     padding: 10px;
     width: 200px;
     height: 300px;
