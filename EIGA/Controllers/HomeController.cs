@@ -36,8 +36,8 @@ namespace EIGA.Controllers
         public Film GetMovieDetails(int movieId)
         {
             // stel in waar de database gevonden kan worden
-            //string connectionString = "Server=172.16.160.21;Port=3306;Database=110632;Uid=110632;Pwd=inf2122sql;";
-            string connectionString = "Server=nd3;Port=18306;Database=abc;Uid=110632;Pwd=inf2122sql;";
+            string connectionString = "Server=172.16.160.21;Port=3306;Database=110632;Uid=110632;Pwd=inf2122sql;";
+            //string connectionString = "Server=nd3;Port=18306;Database=abc;Uid=110632;Pwd=inf2122sql;";
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<Film> films = new List<Film>();
@@ -60,12 +60,14 @@ namespace EIGA.Controllers
                         // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
                         string Name = reader["Naam"].ToString();
                         string Poster = reader["Poster"].ToString();
+                        string filminfo = reader["filminfo"].ToString();
 
                         Film p = new Film();
                         // voeg de naam toe aan de lijst met namen
                         p.Id = Convert.ToInt32(reader["id"].ToString());
                         p.Name = Name;
                         p.Poster = Poster;
+                        p.filminfo = filminfo;
 
                         films.Add(p);
 
@@ -105,12 +107,14 @@ namespace EIGA.Controllers
                         // selecteer de kolommen die je wil lezen. In dit geval kiezen we de kolom "naam"
                         string Name = reader["Naam"].ToString();
                         string Poster = reader["Poster"].ToString();
+                        string filminfo = reader["filminfo"].ToString();
 
                         Film p = new Film();
                         // voeg de naam toe aan de lijst met namen
                         p.Id = Convert.ToInt32(reader["id"].ToString());
                         p.Name = Name;
                         p.Poster = Poster;
+                        p.filminfo = filminfo;
 
                         Film.Add(p);
 

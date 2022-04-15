@@ -48,3 +48,21 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
 }
+
+.dtpst {
+    width: 250px;
+    height: 350px;
+}
+
+.row {
+    display: flex;
+}
+
+.colmn {
+    flex: 5%;
+}
+
+.psttxt {
+    color: white;
+    flex: 50%;
+}
